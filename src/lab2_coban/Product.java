@@ -75,5 +75,9 @@ public class Product {
         System.out.println("Mã sản phẩm "+productCode+" "+"Tên sản phẩm "+productName
                 +" "+"Gía sản phẩm "+productPrice+" "+"Số lượng sản phẩm "+productQuantity);
     }
+
+    public boolean getGia1SP() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }
