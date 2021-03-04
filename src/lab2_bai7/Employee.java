@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lab2_bai6;
+package lab2_bai7;
 
 /**
  *
  * @author Pham Tuan
  */
-class DateTime {
+public class Employee {
     
 }
