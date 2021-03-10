@@ -5,71 +5,87 @@
  */
 package lab2_bai6;
 
-import java.util.Date;
-import javax.print.attribute.standard.DateTimeAtCompleted;
+import java.util.Scanner;
 
 /**
  *
  * @author Pham Tuan
  */
 public class KhachHang {
-    protected String code;
-    protected String name;
-    protected int quantity;
-    protected double price;
-    protected double money;
-    protected DateTime date;
-    public KhachHang() {
-    }
-
-    public KhachHang(String code, String name, int quantity, double price, double money, DateTime date) {
-        this.code = code;
-        this.name = name;
-        this.quantity = quantity;
-        this.price = price;
-        this.money = money;
-        this.date = date;
-    }
-
-    public String getCode() {
-        return code;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
-
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getMoney() {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-    
-    
+     protected int MaKH, SoLuong;
+protected double DonGia, ThanhTien;
+protected String NgayHD, HoTenKH;
+Scanner in =new Scanner(System.in);
+protected KhachHang()
+{
+this.MaKH=0;
+this.DonGia=0;
+this.NgayHD="";
+this.HoTenKH="";
+this.SoLuong=0;
+}
+protected KhachHang(int ma, double dgia, String ngay, String hoten, int sl, 
+double ttien)
+{
+this.MaKH=ma;
+this.DonGia=dgia;
+this.NgayHD=ngay;
+this.HoTenKH=hoten;
+this.SoLuong=sl;
+this.ThanhTien=ttien;
+}
+protected int getMaKH() {
+return MaKH;
+}
+protected void setMaKH(int maKH) {
+MaKH = maKH;
+}
+protected double getDonGia() {
+return DonGia;
+}
+protected void setDonGia(double donGia) {
+DonGia = donGia;
+}
+protected String getNgayHD() {
+return NgayHD;
+}
+protected void setNgayHD(String ngayHD) {
+NgayHD = ngayHD;
+}
+protected String getHoTenKH() {
+return HoTenKH;
+}
+protected void setHoTenKH(String hoTenKH) {
+HoTenKH = hoTenKH;
+}
+protected int getSoLuong() {
+return SoLuong;
+}
+protected void setSoLuong(int sl) {
+SoLuong = sl;
+}
+protected double getThanhTien() {
+return ThanhTien;
+}
+protected void setThanhTien(double thanhTien) {
+ThanhTien = thanhTien;
+}
+protected void nhap()
+{
+System.out.println("Nhap Ma Khach Hang: ");
+MaKH = in.nextInt();
+System.out.println("Ho va Ten Khach Hang: ");
+HoTenKH = in.next();
+System.out.println("Ngay Lap Hoa Don: ");
+NgayHD = in.next();
+System.out.println("So Luong(KW): ");
+SoLuong = in.nextInt();
+System.out.println("Don Gia: ");
+DonGia = in.nextDouble();
+}
+public String toString() {
+return "[MaKH: " + MaKH + ", HoTenKH: " + HoTenKH + ", NgayHD: " + 
+NgayHD
++ ", DonGia: " + DonGia + ", SoLuong: " +SoLuong;
+}
 }
