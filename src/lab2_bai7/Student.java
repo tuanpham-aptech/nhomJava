@@ -10,58 +10,69 @@ package lab2_bai7;
  * @author Pham Tuan
  */
 public class Student extends Person{
-    private double mon1;
-    private double mon2;
+     private double mh1;
+    private double mh2;
     private String danhgia;
 
     public Student() {
     }
 
-    public Student(double mon1, double mon2,String danhgia) {
-        this.mon1 = mon1;
-        this.mon2 = mon2;
+    public Student(double mh1, double mh2, String danhgia, String hoten, String diachi) {
+        super(hoten, diachi);
+        this.mh1 = mh1;
+        this.mh2 = mh2;
         this.danhgia = danhgia;
     }
 
-    public Student(double mon1, double mon2, String name, String address) {
-        super(name, address);
-        this.mon1 = mon1;
-        this.mon2 = mon2;
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public double getMon1() {
-        return mon1;
+    public double getMh1() {
+        return mh1;
     }
 
-    public void setMon1(double mon1) {
-        this.mon1 = mon1;
+    public void setMh1(double mh1) {
+        this.mh1 = mh1;
     }
 
-    public double getMon2() {
-        return mon2;
+    public double getMh2() {
+        return mh2;
     }
 
-    public void setMon2(double mon2) {
-        this.mon2 = mon2;
+    public void setMh2(double mh2) {
+        this.mh2 = mh2;
+    }
+    public double tong(){
+        return (this.mh1 + this.mh2)/2;
     }
 
-    public String getName() {
-        return name;
+    public String getDanhgia() {
+        return danhgia;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDanhgia(String danhgia) {
+        this.danhgia = danhgia;
     }
 
-    public String getAddress() {
-        return address;
+    @Override
+    public void setDiachi(String diachi) {
+        super.setDiachi(diachi); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    @Override
+    public String getDiachi() {
+        return super.getDiachi(); //To change body of generated methods, choose Tools | Templates.
     }
-    public double diemTB(){
-        double diemTB = (this.mon1 *this.mon2)/2;
-        return diemTB;
+
+    @Override
+    public void setHoten(String hoten) {
+        super.setHoten(hoten); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public String getHoten() {
+        return super.getHoten(); //To change body of generated methods, choose Tools | Templates.
     }
 }

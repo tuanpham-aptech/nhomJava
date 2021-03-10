@@ -10,31 +10,36 @@ package lab2_bai7;
  * @author Pham Tuan
  */
 public class Person {
-    protected String name;
-    protected String address;
+    private String hoten;
+    private String diachi;
 
     public Person() {
     }
 
-    public Person(String name, String address) {
-        this.name = name;
-        this.address = address;
+    public Person(String hoten, String diachi) {
+        this.hoten = hoten;
+        this.diachi = diachi;
     }
 
-    public String getName() {
-        return name;
+    public String getHoten() {
+        return hoten;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setHoten(String hoten) {
+        this.hoten = hoten;
     }
 
-    public String getAddress() {
-        return address;
+    public String getDiachi() {
+        return diachi;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setDiachi(String diachi) {
+        this.diachi = diachi;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" + "hoten=" + hoten + ", diachi=" + diachi + '}';
     }
     
 }
