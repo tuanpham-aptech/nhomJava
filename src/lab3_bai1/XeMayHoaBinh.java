@@ -51,6 +51,12 @@ public class XeMayHoaBinh extends XeMay{
         Scanner sc= new Scanner(System.in);
         System.out.println("nhap vao so luong xe may o hoa binh");
         n= Integer.parseInt(sc.nextLine());
+        mangxe=new XeMay[n];
+        for(int i=0;i<n;i++) {
+        System.out.println("Nhap thong tin xe may thu :"+(i+1));
+        mangxe[i]=new XeMay();
+        mangxe[i].nhap();
+}
     }
     
 }

@@ -5,6 +5,8 @@
  */
 package lab3_bai1;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Pham Tuan
@@ -17,12 +19,19 @@ public class XeMay implements IXe{
 
     @Override
     public void nhap() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhập biển số ");
+        bienso = sc.nextLine();
+        System.out.println("Nhập loại xe");
+        loaixe = sc.nextLine();
+        System.out.println("Nhập màu xe ");
+        mauxe = sc.nextLine();
+        
     }
 
     @Override
     public void hienthi() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     public XeMay() {
